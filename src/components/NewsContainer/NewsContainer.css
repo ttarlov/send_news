@@ -1,0 +1,4 @@
+.news-container {
+  border: solid red 1px;
+  grid-area: 2 / 2 / 6 / 6;
+}

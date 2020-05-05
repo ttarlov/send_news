@@ -1,0 +1,29 @@
+.menu {
+  border: solid red 1px;
+  grid-area: 1 / 1 / 6 / 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.heading-one {
+  color: #FFFFFF;
+  font-size: 3em;
+  margin-left: 55px;  
+}
+
+.heading-two {
+  color: #EDA20F;
+  margin-left: 10px;
+}
+
+.section-img {
+  width: 10%;
+  margin-right: 15px;
+}
+
+.section-heading {
+  font-size: 2em;
+}
