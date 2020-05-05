@@ -13,21 +13,22 @@ const Menu = () => {
 
   const navSections =
   [
-  {img:LocalNews, title: "Local News", alt: "location pin"},
-  {img:Technology, title: "Technology", alt: ""},
-  {img:Entertainment, title: "Entertainment"},
-  {img:Science, title: "Science"},
-  {img:Health, title: "Health"}
+  {img:LocalNews, title: "Local News", alt: "location pin", key: "Local News"},
+  {img:Technology, title: "Technology", alt: "gear icon", key: "Tech"},
+  {img:Entertainment, title: "Entertainment", alt: "video camera icon", key: "Entertainment"},
+  {img:Science, title: "Science", alt: "globe icon", key: "Science"},
+  {img:Health, title: "Health", alt: "heart icon", key: "Health"}
 ]
 
 
   const newsHeading = navSections.map(heading => {
 
     return (
-      <p className="section-heading" >
+      <p className="section-heading" key={heading.key} >
         <img className="section-img"
           src={heading.img}
-          alt="location pin"/>
+          alt={heading.alt}
+          />
       {heading.title}
       </p>
     )
