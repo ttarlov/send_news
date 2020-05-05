@@ -1,0 +1,22 @@
+.search-bar {
+  border: solid red 1px;
+  grid-area: 1 / 2 / 2 / 6;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-button {
+  width: 13%;
+  height: 3.2em;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.search-input {
+  width: 75%;
+  background: none;
+  border: none;
+  font-size: 2em;
+}
