@@ -4,11 +4,11 @@ import './NewsArticle.css';
 const NewsArticle = (props) => {
 
   return (
-    <article>
+    <article className='article-container' key= {props.headline}>
       <h1>{props.headline}</h1>
       <p>{props.description}</p>
       <img src={props.img}/>
-      <a href="url">Click Here To Read Article</a>
+      <a href={props.url}>Click Here To Read Article</a>
     </article>
   )
 }
