@@ -14,20 +14,44 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      localNews: local,
+      local: local,
       entertainment: entertainment,
       health: health,
       science: science,
-      tech: tech
+      tech: tech,
+      // allNews: [local, entertainment, health, science, tech],
+      displayedNews: health,
+      selectedHeading: "health"
     }
+  }
+
+  sendNews = (newsType) => {
+
+    this.setState({displayedNews: this.state[newsType], selectedHeading: newsType})
+  }
+
+
+  searchNews = (searchValue) => {
+    let caseSensitive = searchValue.toLowerCase()
+    let foundNews = this.state.displayedNews.filter(article => {
+
+      console.log(searchValue.toUpperCase());
+
+      return(
+        article.headline.toLowerCase().includes(caseSensitive)||
+        article.description.toLowerCase().includes(searchValue)
+      )
+    })
+    this.setState({displayedNews:foundNews})
+    //filer the this.state.displayedNews for each article.headline || article.description
   }
 
   render () {
     return (
       <div className="app">
-        <Menu />
-        <SearchForm />
-        <NewsContainer news = {this.state}/>
+        <Menu sendNews = {this.sendNews} selectedHeading = {this.state.selectedHeading}/>
+        <SearchForm searchNews = {this.searchNews} />
+        <NewsContainer news = {this.state.displayedNews}/>
       </div>
     );
   }

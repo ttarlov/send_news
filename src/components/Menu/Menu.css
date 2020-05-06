@@ -11,7 +11,7 @@
 .heading-one {
   color: #FFFFFF;
   font-size: 3em;
-  margin-left: 55px;  
+  margin-left: 55px;
 }
 
 .heading-two {
@@ -26,4 +26,8 @@
 
 .section-heading {
   font-size: 2em;
+}
+
+.selected {
+  border-bottom: 4px solid white;
 }

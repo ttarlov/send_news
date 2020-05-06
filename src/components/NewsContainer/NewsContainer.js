@@ -3,9 +3,9 @@ import './NewsContainer.css'
 import NewsArticle from '../NewsArticle/NewsArticle.js'
 
 const NewsContainer = (props) => {
-  console.log(props.news.localNews);
+  console.log(props.news);
 
-  const allArticles = props.news.localNews.map(article => {
+  const allArticles = props.news.map(article => {
     return <NewsArticle
             headline = {article.headline}
             description = {article.description}

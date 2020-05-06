@@ -9,22 +9,22 @@ import Health from '../../icons/360.svg'
 
 
 
-const Menu = () => {
+const Menu = (props) => {
 
   const navSections =
   [
-  {img:LocalNews, title: "Local News", alt: "location pin", key: "Local News"},
-  {img:Technology, title: "Technology", alt: "gear icon", key: "Tech"},
-  {img:Entertainment, title: "Entertainment", alt: "video camera icon", key: "Entertainment"},
-  {img:Science, title: "Science", alt: "globe icon", key: "Science"},
-  {img:Health, title: "Health", alt: "heart icon", key: "Health"}
+  {img:LocalNews, title: "Local News", alt: "location pin", key: "local"},
+  {img:Technology, title: "Technology", alt: "gear icon", key: "tech"},
+  {img:Entertainment, title: "Entertainment", alt: "video camera icon", key: "entertainment"},
+  {img:Science, title: "Science", alt: "globe icon", key: "science"},
+  {img:Health, title: "Health", alt: "heart icon", key: "health"}
 ]
 
 
   const newsHeading = navSections.map(heading => {
-
+      console.log(heading.key);
     return (
-      <p className="section-heading" key={heading.key} >
+      <p className= {props.selectedHeading === heading.key ? "section-heading selected" : "section-heading" } key={heading.key} onClick = {()=> props.sendNews(heading.key) }>
         <img className="section-img"
           src={heading.img}
           alt={heading.alt}
