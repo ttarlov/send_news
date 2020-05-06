@@ -47,7 +47,10 @@ const Menu = (props) => {
   )
 
 
-
 };
+
+Menu.propTypes = {
+  selectedHeading: PropTypes.string,
+}
 
 export default Menu;
