@@ -6,13 +6,14 @@ const NewsContainer = (props) => {
   console.log(props.news);
 
   const allArticles = props.news.map(article => {
-    return <NewsArticle
+    return( <NewsArticle
             headline = {article.headline}
             description = {article.description}
             img = {article.img}
             url = {article.url}
             key = {article.headline}
             />
+          )
   })
 
 
