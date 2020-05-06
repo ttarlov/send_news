@@ -1,11 +1,11 @@
 import React from 'react';
-import './Menu.css'
+import './Menu.css';
 import LocalNews from '../../icons/location-icon.svg';
 import Technology from '../../icons/gear.svg';
 import Entertainment from '../../icons/movie-camera.svg';
 import Science from '../../icons/planet.svg';
-import Health from '../../icons/360.svg'
-
+import Health from '../../icons/360.svg';
+import PropTypes from 'prop-types';
 
 
 
@@ -45,6 +45,9 @@ const Menu = (props) => {
     </nav>
 
   )
-}
+
+
+
+};
 
 export default Menu;
