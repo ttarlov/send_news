@@ -26,8 +26,11 @@
 
 .section-heading {
   font-size: 2em;
+  width: 100%;
+  height: auto;
 }
 
 .selected {
-  border-bottom: 4px solid white;
+  color: #EDA20F;
+
 }
