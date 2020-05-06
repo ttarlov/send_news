@@ -1,17 +1,17 @@
 .menu {
-  border: solid red 1px;
   grid-area: 1 / 1 / 6 / 2;
-  color: white;
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  background-color: #2A2B2E;
 }
 
 .heading-one {
   color: #FFFFFF;
   font-size: 3em;
-  margin-left: 55px;
+  width: 100%
 }
 
 .heading-two {
