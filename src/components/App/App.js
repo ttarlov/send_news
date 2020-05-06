@@ -35,15 +35,12 @@ class App extends Component {
     let caseSensitive = searchValue.toLowerCase()
     let foundNews = this.state.displayedNews.filter(article => {
 
-      console.log(searchValue.toUpperCase());
-
       return(
         article.headline.toLowerCase().includes(caseSensitive)||
         article.description.toLowerCase().includes(searchValue)
       )
     })
     this.setState({displayedNews:foundNews})
-    //filer the this.state.displayedNews for each article.headline || article.description
   }
 
   render () {
