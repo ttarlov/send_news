@@ -15,15 +15,18 @@ class SearchForm extends Component {
   }
 
 
-  executeSearch = (props) => {
-    this.props.searchNews(this.state.searchBar)
+  executeSearch = (event) => {
+      event.preventDefault()
+
+      this.props.searchNews(this.state.searchBar)
   }
 
 
   render() {
 
     return (
-      <section className ="search-bar" >
+
+      <form className ="search-bar" >
         <input value= {this.state.searchBar}
               className ="search-input"
               type="text"
@@ -31,11 +34,15 @@ class SearchForm extends Component {
               onChange={this.handleChange}>
         </input>
 
-        <button className="search-button" type="button" onClick={this.executeSearch}>
+        <button className="search-button"
+                type="submit"
+                onClick = {this.executeSearch}
+                >
         Search Now
         </button>
 
-      </section>
+      </form>
+
     )
   }
 

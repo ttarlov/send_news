@@ -18,6 +18,7 @@ const NewsContainer = (props) => {
   })
 
 
+
   return (
     <aside className = "news-container">
       {allArticles}
