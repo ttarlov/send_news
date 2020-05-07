@@ -9,20 +9,35 @@ import './App.css';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
 import NewsContainer from '../NewsContainer/NewsContainer';
+import { fetchNewsArticles } from '../../ApiCalls.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      local: local,
-      entertainment: entertainment,
-      health: health,
-      science: science,
-      tech: tech,
-      // allNews: [local, entertainment, health, science, tech],
-      displayedNews: health,
-      selectedHeading: "health"
+      local: null,
+      entertainment: null,
+      health: null,
+      science: null,
+      tech: null,
+      displayedNews: [],
+      selectedHeading: "health",
     }
+  }
+
+  componentDidMount = () => {
+
+    fetchNewsArticles().then(data =>
+      this.setState(
+        {local:data.local,
+          entertainment: data.entertainment,
+          health: data.health,
+          science: data.science,
+          tech: data.technology,
+        }
+    )).then(() => this.setState({displayedNews:this.state.local}))
+
+
   }
 
   sendNews = (newsType) => {
