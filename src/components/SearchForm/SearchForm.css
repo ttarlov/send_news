@@ -1,5 +1,4 @@
 .search-bar {
-  border: solid red 1px;
   grid-area: 1 / 2 / 2 / 6;
   display: flex;
   justify-content: space-around;
@@ -8,15 +7,19 @@
 
 .search-button {
   width: 13%;
-  height: 3.2em;
+  height: 2.8em;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 500;
+  border: solid 4px #EDA20F;
 }
 
 .search-input {
   width: 75%;
   background: none;
-  border: none;
+  border: solid 4px #EDA20F;
+  border-radius: 20px;
   font-size: 2em;
+  padding: 10px;
+  color: white;
 }
