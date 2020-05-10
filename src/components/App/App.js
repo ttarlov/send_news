@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import local from '../../data/local';
-import entertainment from '../../data/entertainment';
-import health from '../../data/health';
-import science from '../../data/science';
-import tech from '../../data/technology'
+// import local from '../../data/local';
+// import entertainment from '../../data/entertainment';
+// import health from '../../data/health';
+// import science from '../../data/science';
+// import tech from '../../data/technology'
 
 import './App.css';
 import Menu from '../Menu/Menu';
@@ -21,7 +21,7 @@ class App extends Component {
       science: null,
       tech: null,
       displayedNews: [],
-      selectedHeading: "health",
+      selectedHeading: "local",
     }
   }
 

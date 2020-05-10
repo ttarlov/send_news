@@ -23,15 +23,16 @@ const Menu = (props) => {
 
   const newsHeading = navSections.map(heading => {
     return (
-      <div>
-        <p tabindex='0' className= {props.selectedHeading === heading.key ? "section-heading selected" : "section-heading" } key={heading.key} onClick = {()=> props.sendNews(heading.key) }>
+        <p tabIndex='0'
+           className= {props.selectedHeading === heading.key ? "section-heading selected" : "section-heading" }
+           key={heading.key}
+           onClick = {()=> props.sendNews(heading.key) }>
           <img className="section-img"
             src={heading.img}
             alt={heading.alt}
             />
         {heading.title}
         </p>
-      </div>
     )
   })
 

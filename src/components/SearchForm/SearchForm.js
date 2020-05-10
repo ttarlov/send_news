@@ -30,6 +30,7 @@ class SearchForm extends Component {
         <input value= {this.state.searchBar}
               className ="search-input"
               type="text"
+              data-testid ="input-element"
               placeholder="Search for news article here."
               onChange={this.handleChange}>
         </input>

@@ -9,7 +9,7 @@ const NewsArticle = (props) => {
     <article className='article-container' key= {props.headline}>
       <h1>{props.headline}</h1>
       <p>{props.description}</p>
-      <img src={props.img} alt= "na"/>
+      <img src={props.img} alt= {`image for ${props.headline}`}/>
       <a href={props.url}>Click Here To Read Article</a>
     </article>
   )
